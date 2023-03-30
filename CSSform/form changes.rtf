@@ -1,0 +1,127 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoascreenfonts1\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww14240\viewh11400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Copy the images folder, send form email.php and original contact form to a new folder. Rename contact form to contactformCSS.html\
+\
+Delete all of the table information and add paragraph tags between elements. \
+Should look like this: \
+<form name="contactform" method="post" action="send_form_email.php">\
+  <p>\
+  <label for="first_name">First Name *</label>\
+</p>\
+ <p>\
+  <input  type="text" name="first_name" maxlength="50" size="30">\
+ </p>\
+  <p>\
+  <label for="last_name">Last Name *</label>\
+ </p>\
+  <p>\
+  <input  type="text" name="last_name" maxlength="50" size="30">\
+ </p>\
+  <p>\
+  <label for="email">Email Address *</label>\
+ </p>\
+  <p>\
+  <input  type="text" name="email" maxlength="80" size="30">\
+ </p>\
+  <p>\
+  <label for="telephone">Telephone Number</label>\
+ </p>\
+  <p>\
+  <input  type="text" name="telephone" maxlength="30" size="30">\
+ </p>\
+  <p>\
+  <label for="comments">Comments *</label>\
+</p>\
+ <p>\
+  <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>\
+ </p>\
+  <p>\
+  <input type="submit" value="Submit">  \
+</p>\
+\
+\
+Change\
+  <input type="submit" value="Submit">   to    <button id="submit" type="submit">Submit</button>  \
+We need to do this so we can use our custom SPRITE button designed in Photoshop. Reference this button. \
+\
+In the CSS Styles window create a #wrapper div. Make sure it goes to a new css - global.css\
+#wrapper \{\
+	width: 960px;\
+	margin-right: auto;\
+	margin-left: auto;\
+	\
+Insert that div and have it surround the form elements. \
+\
+Insert a div called #contact. Don't add any styles to it right now. Instead insert it into the html and have it hold the form elements and be inside the wrapper div. \
+\
+Go to the global.css window and type this:\
+#contact \{\
+	color: #fff;\
+	background: #2d2d2d;\
+	background: -webkit-gradient(  linear,  left bottom,  left top,  color-stop(0, rgb(60,60,60)),  color-stop(0.74, rgb(43,43,43)),  color-stop(1, rgb(60,60,60))  );\
+	background: -moz-linear-gradient(  center bottom,  rgb(60,60,60) 0%,  rgb(43,43,43) 74%,  rgb(60,60,60) 100%  );\
+	-moz-border-radius: 10px;\
+	-webkit-border-radius: 10px;\
+	border-radius: 10px;\
+	width: 280px;\
+	margin-right: auto;\
+	margin-left: auto;\
+	position: relative;\
+	padding-left: 20px;\
+	padding-right: 20px;\
+	padding-bottom: 60px;\
+	border: medium outset #F90;\
+\}\
+#contact a \{\
+	color: #8c910b;\
+	text-shadow: 0px -1px 0px #000;\
+\}\
+#contact h2 \{\
+	color: #fff;\
+	text-shadow: 0px -1px 0px #000;\
+	border-bottom: solid #181818 1px;\
+	-moz-box-shadow: 0px 1px 0px #3a3a3a;\
+	text-align: center;\
+	padding: 18px;\
+	margin: 0px;\
+	font-weight: normal;\
+	font-size: 24px;\
+	font-family: Lucida Grande, Helvetica, Arial, sans-serif;\
+\}\
+\
+Now that we have defined the way the h2 elements look that are inside of the #contact div lets add a heading 2 element. \
+*Note. We could have used an h1 element, just choose h2. \
+\
+Add this in the html code \
+<h2>Let's Connect.</h2>\
+Put it below the #contact div and above the opening of the form. \
+\
+Now let's change the font for the entire form. Since there is nothing else on the page we can just apply the font changes to the body tag. Type this in the CSS. \
+body \{\
+	font-family: Helvetica, Arial, sans-serif;\
+	font-size: 12px;\
+\}\
+\
+Now we need to control the submit button. In the CSS type this:\
+\
+#submit \{\
+	width: 203px;\
+	height: 40px;\
+	border: none;\
+	text-indent: -9999px;\
+	background: url('images/submitButton.png') no-repeat;\
+	cursor: pointer;\
+	float: left;\
+	\}\
+	\
+	#submit:hover \{ background-position: 0px -41px; \}\
+	#submit:active \{ background-position: 0px -82px; \}\
+	\
+It is using our Sprite image - See the Sprite image in Photoshop. \
+\
+Now open Cyberduck and drop the CSS Form folder in the public_html folder. Fill out the form and then check your spam to make sure it works. If you didn't touch the form base or the php elements it should work. }

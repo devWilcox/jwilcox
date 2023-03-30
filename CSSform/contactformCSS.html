@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pretty Form</title>
+<link href="global.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+<div id="wrapper">
+<div id="contact">
+<h2>Let's Connect.</h2>
+<form name="contactform" method="post" action="send_form_email.php">
+  <p>
+  <label for="first_name">First Name *</label>
+</p>
+ <p>
+  <input  type="text" name="first_name" maxlength="50" size="30">
+ </p>
+  <p>
+  <label for="last_name">Last Name *</label>
+ </p>
+  <p>
+  <input  type="text" name="last_name" maxlength="50" size="30">
+ </p>
+  <p>
+  <label for="email">Email Address *</label>
+ </p>
+  <p>
+  <input  type="text" name="email" maxlength="80" size="30">
+ </p>
+  <p>
+  <label for="telephone">Telephone Number</label>
+ </p>
+  <p>
+  <input  type="text" name="telephone" maxlength="30" size="30">
+ </p>
+  <p>
+  <label for="comments">Comments *</label>
+</p>
+ <p>
+  <textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
+ </p>
+  <p>
+  <button id="submit" type="submit">Submit</button> 
+</p>
+</form>
+</div>
+</div>
+</body>
+</html>
